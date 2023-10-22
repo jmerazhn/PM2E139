@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2E139.Views.MapaEmple">
+    <ContentPage.Content>
+        <StackLayout>
+            <maps:Map HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="Mapa" IsShowingUser="True" />
+
+            <Label x:Name="txtpl" Text="Latitud:" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblLat"   Text="{Binding latitud}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="Black" />
+
+
+            <Label x:Name="txtjl" Text="Longitud:" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblLon" Text="{Binding longitud}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="Black"/>
+
+            <Label x:Name="lblDesc" IsVisible="false" Text="{Binding descripcion}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

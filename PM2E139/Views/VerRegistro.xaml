@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Ver Registro"
+             x:Class="PM2E139.Views.VerRegistro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Margin="10,10,10,0" x:Name="foto" Source="{Binding image}"  HeightRequest="250" BackgroundColor="Pink" />
+
+
+            <Label x:Name="lblCod" Text="{Binding id}" TextColor="White"/>
+
+            <Label Text="Latitud:" Margin="10,0,0,0" FontSize="Body" TextColor="Black"/>
+            <Label x:Name="txtLat" Text="{Binding latitud}" Margin="10,0,0,0" FontSize="Body" TextColor="Gray"/>
+
+            <Label Text="Longitud:" Margin="10,0,0,0" FontSize="Body" TextColor="Black" />
+            <Label x:Name="txtLon" Text="{Binding longitud}" Margin="10,0,0,0" FontSize="Body" TextColor="Gray"/>
+
+
+            <Label x:Name="descripcion" Text="Descripcion:" Margin="10,0,0,0" FontSize="Body" TextColor="Black" />
+            <Entry x:Name="txtDes" Text="{Binding descripcion}" Margin="10,0,0,10" IsEnabled="False"/>
+
+
+            <Button x:Name="Lista" Text="Ir a la Lista" Clicked="Lista_Clicked" TextColor="White" BackgroundColor="Blue" Margin="30,5,30,5"/>
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" TextColor="White" BackgroundColor="Blue" Margin="30,5,30,5"/>
+            <Button x:Name="Enviar" Text="Compartir" Clicked="Enviar_Clicked" TextColor="Black" BackgroundColor="Pink" Margin="30,5,30,5"/>
+
+            <Label x:Name="lblimage" Text="{Binding image}" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
